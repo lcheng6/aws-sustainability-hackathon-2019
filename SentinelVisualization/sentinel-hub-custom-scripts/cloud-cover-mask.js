@@ -8,7 +8,6 @@
 function index(x, y) {
     return (x - y) / (x + y);
 }
-cd
 function clip(a) {
     return Math.max(0, Math.min(1, a));
 }
