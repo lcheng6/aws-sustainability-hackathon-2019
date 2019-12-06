@@ -9,7 +9,9 @@ This repo provides scripts that download and process the satellite imagery for a
 *   Sentinal-2 imagery is pulled using the SentinalHub API tool.
 *   Imagery is stored in Amazon S3 for each time stamp, including
     *   Normalized difference vegetation index (NDVI) image, which is the a RGB image, where green indicates forest cover. 
-    *   NVDI Porto Valle, Brazil 09/25/2019: ![](sample-images/nvdi-porto-valle-09_25_2019.png) 
+    *   NVDI Porto Velho, Brazil 09/25/2019: ![](sample-images/nvdi-porto-valle-09_25_2019.png) 
+    *   NVDI Porto Velho, Brazil 09/30/2019: ![](sample-images/nvdi-porto-valle-09_30_2016.png).  The amount of green is observable forest canopy, with which we can estimated loss of tree cover
+    *   
     *   Cloud cover masks
     
 *   From S3, the data is analyzed using the following method:
