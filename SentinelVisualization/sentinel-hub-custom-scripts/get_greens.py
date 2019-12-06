@@ -4,6 +4,8 @@ from scipy.spatial import cKDTree as KDTree
 from scipy import misc
 import cv2
 import matplotlib.pyplot as plt
+# from matplotlib.pyplot import imread
+# from scipy.misc import imread
 
 
 
@@ -59,10 +61,10 @@ def compare_greens(img1,img2):
     return
 
 def main():
-    img1 = misc.imread('img1.png',mode = 'RGB') #RGB image on Day1
-    img2 = misc.imread('img2.png',mode = 'RGB') #RGB image on Day2
-    img1_1 = cv2.imread('img1_1.png',cv2.IMREAD_GRAYSCALE) #Cloud Image on Day1
-    img2_2 = cv2.imread('img2_2.png',cv2.IMREAD_GRAYSCALE) #Cloud image on Day2
+    img1 = misc.imread('../sample-data/nvdi-customized-1.png',mode = 'RGB') #RGB image on Day1
+    img2 = misc.imread('../sample-data/nvdi-customized-5.png',mode = 'RGB') #RGB image on Day2
+    img1_1 = cv2.imread('../sample-data/cloud-1.jpeg',cv2.IMREAD_GRAYSCALE) #Cloud Image on Day1
+    img2_2 = cv2.imread('../sample-data/cloud-5.jpeg',cv2.IMREAD_GRAYSCALE) #Cloud image on Day2
     masked_img1 = apply_mask(img1,img1_1)
     masked_img2 = apply_mask(img2,img2_2)
     compare_greens(masked_img1,masked_img2) 
