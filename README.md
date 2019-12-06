@@ -30,6 +30,8 @@ This repo provides scripts that download and process the satellite imagery for a
 *    Using Artificial Intelligence techniques, predicting pixel values instead of masking out cloud cover.
 *    Predicting when the deforestation is going to happen using Relation Learning.
     *   This could be used to relocate all the people from unsustainable areas to the nearest sustainable location
+*   Use serverless data processing, such as large # of lambda functions to do map-reduce instead of using traditional infrastructure like EC2/EMR
+*   Use good serverless Big Data solutions, such as Athena, QuickSight, Glue for data processing tasks
 
 
 
