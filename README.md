@@ -14,6 +14,7 @@ This repo provides scripts that download and process the satellite imagery for a
     *   For each timestamp, the cloud cover mask is used to remove pixels from the NDVI image.
     *   The number of tree cover pixels (green) are counted. We know both raster datasets are at a 10 meter resolution so the area of the tree cover can be converted to relatable area (football fields)
 *   AWS Lambda is used to run the solution at scale.
+*   The API takes the user input for month and spatial location and saves the resulting counts to S3 output.
 
 ## Further development of the solution would include:
 
