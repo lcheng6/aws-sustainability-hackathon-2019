@@ -57,3 +57,9 @@ def upload_images_to_s3:
         s3_client.upload_file(file_name, bucket, object_name)
         object_name = f"nvdi-customized-{i}.jpeg"
         s3_client.upload_file(file_name, bucket, object_name)
+
+
+def lambda_handler(event, context):
+    #just get relevant images and upload to s3
+    getImages()
+    upload_images_to_s3()
