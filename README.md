@@ -15,7 +15,8 @@ This repo provides scripts that download and process the satellite imagery for a
     *   Cloud cover mask examples of the same area over a period of a month: 
     ![](sample-images/cloud-11_01_2019.png)
     ![](sample-images/cloud-11_08_2019.png)
-    *   Obersved cloud mask 11/01/2019: ![](sample-images/cloud)
+    ![](sample-images/cloud-11_15_2019.png)
+    ![](sample-images/cloud-11_22_2019.png)
     
 *   From S3, the data is analyzed using the following method:
     *   For each timestamp, the cloud cover mask is used to remove pixels from the NDVI image.
