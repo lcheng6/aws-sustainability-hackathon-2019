@@ -11,8 +11,11 @@ This repo provides scripts that download and process the satellite imagery for a
     *   Normalized difference vegetation index (NDVI) image, which is the a RGB image, where green indicates forest cover. 
     *   NVDI Porto Velho, Brazil 09/25/2019: ![](sample-images/nvdi-porto-valle-09_25_2019.png) 
     *   NVDI Porto Velho, Brazil 09/30/2019: ![](sample-images/nvdi-porto-valle-09_30_2016.png).  The amount of green is observable forest canopy, with which we can estimated loss of tree cover
-    *   
-    *   Cloud cover masks
+    *   Cloud cover masks.  Cloud cover occlude tree cover, therefore during the processing steps, the cloud needs to be accounted for.  Our strategy is take multiple look at the same region over a period of 4 passes or 20 days, and combine observed foliage into a single dataset. 
+    *   Cloud cover mask examples of the same area over a period of a month: 
+    ![](sample-images/cloud-11_01_2019.png)
+    ![](sample-images/cloud-11_08_2019.png)
+    *   Obersved cloud mask 11/01/2019: ![](sample-images/cloud)
     
 *   From S3, the data is analyzed using the following method:
     *   For each timestamp, the cloud cover mask is used to remove pixels from the NDVI image.
