@@ -51,5 +51,9 @@ def getImages:
 
 def upload_images_to_s3:
     s3_client = boto3.client('s3')
-    bucket = os.environ
-    s3_client.upload_file(file_name, bucket, object_name)
+    bucket = os.environ.get("BucketName")
+    for i in [0..5]:
+        object_name = f"cloud-{i}.jpeg"
+        s3_client.upload_file(file_name, bucket, object_name)
+        object_name = f"nvdi-customized-{i}.jpeg"
+        s3_client.upload_file(file_name, bucket, object_name)
