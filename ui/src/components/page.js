@@ -13,7 +13,8 @@ const Page = () => {
 
     useEffect(() => {
         async function fetchData() {
-            const res = await fetch("https://xu52io6cpl.execute-api.us-east-1.amazonaws.com/test/deforestation?location=Brazil&month=January");
+            const res = await fetch("https://xu52io6cpl.execute-api.us-east-1.amazonaws.com/test/deforestation?location=Brazil&month=January",
+                { mode: 'no-cors' });
             res
                 .json()
                 .then(res => setFootballFields(res))
@@ -32,9 +33,6 @@ const Page = () => {
                 </Row>
                 <Row>
                     <Col><Visualisation /></Col>
-                </Row>
-                <Row>
-                    <p>{footballFields.footballFields}</p>
                 </Row>
             </Content>
 

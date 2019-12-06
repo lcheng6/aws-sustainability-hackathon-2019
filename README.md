@@ -30,3 +30,11 @@ This repo provides scripts that download and process the satellite imagery for a
 *   Most of the images couldn't cover complete area because of cloud cover.
 *   There is a chance of  NDVI value being corrupted.
 *   Masking RGB image using Cloud cover is naive way of solving a problem.
+
+## Setting up in AWS:
+1. Create lambda function for getting doc out of S3 with format location_month.json
+2. Attach lambda function to API gateway
+3. Create S3 bucket for the storage of documents
+4. Modify API payload in page.js
+5. Populate bucket with files
+6. Read files downloaded and display in the UI
