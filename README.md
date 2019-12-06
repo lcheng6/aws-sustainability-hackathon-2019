@@ -6,7 +6,7 @@ This repo provides scripts that download and process the satellite imagery for a
 
 ## The existing solution uses the following steps:
 
-*   Sentinal-2 imagery is pulled using the SentinalHub API tool.
+*   Sentinal-2 imagery is pulled using the SentinalHub API tool, due to its simplicity.  However, we did experiment with https://github.com/RemotePixel/aws-sat-api-py, but found its data tile retrieval ability inferior to Sentinel Hub's implementation. 
 *   Imagery is stored in Amazon S3 for each time stamp, including
     *   Normalized difference vegetation index (NDVI) image, which is the a RGB image, where green indicates forest cover. 
     *   NVDI Porto Velho, Brazil 09/25/2019: ![](sample-images/nvdi-porto-valle-09_25_2019.png) 
@@ -32,6 +32,7 @@ This repo provides scripts that download and process the satellite imagery for a
     *   This could be used to relocate all the people from unsustainable areas to the nearest sustainable location
 *   Use serverless data processing, such as large # of lambda functions to do map-reduce instead of using traditional infrastructure like EC2/EMR
 *   Use good serverless Big Data solutions, such as Athena, QuickSight, Glue for data processing tasks
+*   Use a serverless hosting solution, such as API Gateway, Lambda, Athena, S3, etc to host and distribute Sentinel tiles.  
 
 
 
